@@ -1,20 +1,24 @@
 import { useLoaderData } from "react-router-dom";
 import "./App.css";
 import CoffeeCard from "./components/CoffeeCard";
+import { useState } from "react";
 
 function App() {
-  const coffees = useLoaderData();
+  const loadedCoffees = useLoaderData();
+  const [coffees, setCoffees] = useState(loadedCoffees);
 
   return (
     <>
     <div className="m-20">
-    <h3 className="text-6xl text-center text-purple-600">Hot Coffee: {coffees.length}</h3>
+    <h3 className="text-6xl text-center my-20 text-purple-600">Hot & Cold Coffee: {coffees.length}</h3>
 
 <div className="grid md:grid-cols-2 gap-4">
   {
     coffees.map((coffee) => <CoffeeCard
     key={coffee._id}
     coffee={coffee}
+    coffees={coffees}
+    setCoffees={setCoffees}
     >
 
     </CoffeeCard>)
