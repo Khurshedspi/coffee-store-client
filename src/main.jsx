@@ -4,13 +4,13 @@ import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AddCoffee from "./components/AddCoffee.jsx";
-import UpdateCoffee from "./components/UpdateCoffee";
 import Home from "./components/Home.jsx";
 import Layout from "./components/Layout.jsx";
 import SignIn from "./components/SignIn.jsx";
 import SignUp from "./components/SignUp.jsx";
 import Users from "./components/Users.jsx";
 import AuthProvider from "./providers/AuthProviders.jsx";
+import UpdateCoffee from "./components/updateCoffee.jsx";
 
 const router = createBrowserRouter([
   {
